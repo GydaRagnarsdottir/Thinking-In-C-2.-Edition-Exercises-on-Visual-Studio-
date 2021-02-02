@@ -1,5 +1,12 @@
-#include "E10a.h"
-
+/*
+Find out how to produce assembly language from your C
+and C++ compilers.Write a function in Cand a struct
+with a single member function in C++.Produce assembly
+language from eachand find the function names that are
+produced by your C functionand your C++ member
+function, so you can see what sort of name decoration
+occurs inside the compiler.
+*/
 
 struct A {
 	int add(int, int);
@@ -8,13 +15,13 @@ struct A {
 int A::add(int a, int b) {
 	return (a + b);
 }
-/*
+
 int main() {
 	A a;
 	int b = 1, c = 2;
 	int e = a.add(b, c);
 }
-*/
+
 /*	
 	int e = a.add(b, c);
 006D4100  mov         eax,dword ptr [c]  
