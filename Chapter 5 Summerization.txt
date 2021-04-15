@@ -1,0 +1,25 @@
+Theory:
+Access Control:
+Keywords: public, protected, private, friend
+private: only members could access.
+protected: members and inherited ones.
+public: anyone
+friend: give a function accessibility to private/protected members
+NOTICE:NESTED IS NOT INHERITED
+classes vs structs
+struct: members are public by default
+class: members are private by default
+handle classes:
+purposes:
+1.hide the implementation
+2.reducing recompilation
+design pattern:
+cheshire cat(example):
+class A;
+class B{
+    A* a;
+(...)
+}
+practice:
+(1).If the definition of a class A is nested inside another class B, to call A, the complete nested path should be given(such as B::A), otherwise the compiler will report "declaration is incompatible with ..."
+(2).Classes that have data member(s) need to be constructed with constructor, otherwise their data member will be inaccessible.
