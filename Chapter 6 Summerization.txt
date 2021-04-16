@@ -1,0 +1,26 @@
+1. Theory:
+Constructor:
+Functions that have the exact same name as the class, and is forced called by compiler.
+The object can only be accessible after this is called, because this is used to locate the memory.
+
+Destructor:
+Function that marked by "~" plus class name, called when program leaves the scope in which the object was created.
+Will be triggered even when "goto" is used to jump out of the current scope, but won't be triggered with setjump() and longjump()
+
+Location of the variable definitions:
+Should be where just before the variable is used. To ensure enough initialization information;To increase readability of the scope by avoiding looking at the variable definition at two ends of the file; TO REDUCE THE CHANCE IT WILL BE MISUSED IN SOME OTHER PART OF THE SCOPE.
+
+Aggregate Initialization:
+Enumerating of element(s) in a curved branket for an aggregate object.
+Automatic Counting mechanic is used in aggregate initialization to the number of elements in the given aggregate.
+
+Default Constructor:
+constructor with no argument.
+A manually defined constructor will "override" the default constructor given by the compiler.
+The compiler-synthesized default constructor won't initialize the member data within.
+
+*Avoid using the same variable name for local variable scope.
+*A void pointer cannot be deleted.
+
+2.Practice:
+The size of a class in memory is determined by their data member(s).
