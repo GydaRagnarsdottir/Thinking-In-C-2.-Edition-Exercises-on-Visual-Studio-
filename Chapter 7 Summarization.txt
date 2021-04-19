@@ -1,0 +1,22 @@
+1.Theory:
+Overloading:
+distinguish different functions of the same name with arguments and/or return type.
+
+Union:
+Unlike class, union has public as default accessability of members, the same as struct.Neither can union become the base class of inheritance.
+However union can also have constructor, destructor and member function.
+If the anonymous union is at file scope (outside all functions and classes) then it must be declared static so it has internal linkage.
+
+Default arguments:
+function(int a=0);
+Only trailing arguments may be defaulted
+
+Placeholder arguments:
+Arguments without identifier in a function declaration.
+Could be removed without generating warning.
+To surpress warning info about unused variable.
+
+Comparison betwenn Default Argument and Overloading:
+The most important consideration is the design of class interface
+When creating an object is a heavy load, overloading is preferable.
+
