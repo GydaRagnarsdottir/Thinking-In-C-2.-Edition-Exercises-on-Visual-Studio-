@@ -20,3 +20,6 @@ Comparison betwenn Default Argument and Overloading:
 The most important consideration is the design of class interface
 When creating an object is a heavy load, overloading is preferable.
 
+2.Practice
+Always initialize data members before calling function.
+
