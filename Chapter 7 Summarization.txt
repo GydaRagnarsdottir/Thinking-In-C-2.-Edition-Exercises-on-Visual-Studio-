@@ -22,4 +22,27 @@ When creating an object is a heavy load, overloading is preferable.
 
 2.Practice
 Always initialize data members before calling function.
+Mem::Mem(int sz) {                      Mem::Mem(int sz) {
+  if (sz != 0)                            mem = 0;
+		ensureMinSize(sz);    ==>(X)          size = 0;           ==>(O)
+	mem = 0;                                if (sz != 0)  
+	size = 0;                                 ensureMinSize(sz);                 
+}                                       }
 
+
+3.Open Questions:
+(1)."Stash::Stash(int sz, int initQuantity) : storage(new Mem(sz * initQuantity)) {"
+What is this statement format?
+(2).
+typedef unsigned char byte;
+...
+int Stash::add(void* element) {
+	if (next >= quantity) // Enough space left?
+		inflate(increment);
+	int startBytes = next * size;
+	byte* e = (byte*)element;
+	memcpy(mem->pointer()[startBytes], e, sizeof(e));
+	next++;
+	return(next - 1); // Index number
+}
+Reported "unmatched type" in memcpy statement, both are of type byte, why?
