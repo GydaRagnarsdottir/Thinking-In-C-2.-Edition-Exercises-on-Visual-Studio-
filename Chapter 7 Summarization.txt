@@ -33,6 +33,7 @@ Mem::Mem(int sz) {                      Mem::Mem(int sz) {
 3.Open Questions:
 (1)."Stash::Stash(int sz, int initQuantity) : storage(new Mem(sz * initQuantity)) {"
 What is this statement format?
+A:Constructor Initializer List, see Chapter 8.
 (2).
 typedef unsigned char byte;
 ...
