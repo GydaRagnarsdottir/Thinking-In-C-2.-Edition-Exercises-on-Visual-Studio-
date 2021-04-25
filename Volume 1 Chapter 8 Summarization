@@ -1,0 +1,47 @@
+1. Theory
+Advantage of const over #define:
+(1)Typesafety (2)Reduction of maintainance difficulty
+Usage of const:
+(1)In header file
+(2)Must be defined except extern const due to internal linkage by default in C++
+Extra advantages of using const
+(1)prevent accidental change of value
+(2)enable compiler to generate more efficient code.
+*Can't use a part of a constant aggregate as a constance.
+Specialities of const in C++:
+(1)only locate memory when address is asked for or external
+(2)has file scope due to internal linkage->must declare extern if to be referred from outside of the file
+*In C++ definition is seperated with declaration
+Pointer to const: const int* u or int const* u
+Const pointer: int* const u
+Const pointer to const: const int* const u or int const* const u
+Character array literals such as: char* cp = "hi"; are by default constant. To be able to modify them, use char*[] cp = "hi"; instead
+Const as function argument:
+The argument can't be changed inside the function, but actually it has a scope of the function.
+To avoid misunderstanding of mistakingly thinking the argument is a const, use const int& i = argumentI;
+Const as returned value:
+The returned value of primitive data type is copied, hence "const" doesn't affect the lvalue.
+However the const returned value of user-defined data type can't be lvalue. If return-by-reference takes place, compiler automatically create temporaries to hold it, which is const by default.
+Const in Class:
+Only const member functions can be called by const object.
+Consts in class can only be initialized in constructor, however they can be modified multiple time in constructors.
+#define has a global scope, while const is having a file scope.
+Constuctor Initializer List: to remind programmer that initialization occurs before any code in main constructor.
+Example: Stash::Stash(int sz, int initQuantity) : storage(new Mem(sz * initQuantity))
+Constructor for built-in type:
+To enforce initialization.
+Compile-time constant:
+static const
+Enum hack:
+to create compile-time constance in older version of C++, e.g.: enum{size = 1000};
+Const objects & member functions:
+Const object: its data member won't be modified.
+Const member functions: the only functions that can be called from a const object.
+Bitwise const vs Logical const
+Mutable: Keyword that used on a data member to allow it to be modified in a const function, and the difference between Bitwise const and Logical const
+Romability:Bitwise const & no customed con-/destructor for self, and base class as well as member objects.
+
+
+
+
+
