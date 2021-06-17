@@ -30,7 +30,7 @@ A namespace is
 (2)can be seperated to multiple head file
 (3)can be aliased with another name to save typing
 Each translation unit contains an unnamed namespace that guaranteed to be unique.(?)
-(4)Namespace resolution:
+(4)Namespace resolution(Scope Resolution):
 Namespace::Subnamespace 1::...::Subnamespace N::Class A::Subclass B::...::Subclass N::Memberfunction
 (5)When using "using namespace X" in a header file, X will be introduced to all files that include 
 this header and being included by this header, meaning namespace has lost its meaning.
