@@ -86,3 +86,10 @@ the environment, and can't not be garanteed.
 
 Alternative linkage specification:
 Overload the keyword "extern" to specify whether "C" or "C++" linkage is needed.
+
+Namespace Aliasing:
+Example: 
+namespace ns1{...}
+namespace ns2{...}
+namespace ns3{...}
+namespace alias = ns1::ns2::ns3
